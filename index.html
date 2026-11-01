@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b2d">
+  <meta name="description" content="An Olympic performance analysis project exploring medals, athletes, sports, and regional trends from 1992 to 2026.">
+  <title>Global Olympic Performance Analysis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Olympic Performance home">
+      <span class="brand-mark" aria-hidden="true">O</span>
+      <span>SPORTS<span class="brand-divider">/</span>INSIGHT</span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#overview">Overview</a>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#scenarios">Scenarios</a>
+      <a href="#methodology">Methodology</a>
+    </nav>
+    <a class="header-link" href="#project-links">Project links <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="top">
+    <section class="hero" id="overview">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> DATA STORY · OLYMPIC GAMES</p>
+        <h1>What makes a<br>nation <span>champion?</span></h1>
+        <p class="hero-description">
+          A data-led look at Olympic medals, athlete participation, and sport performance.
+          Explore the patterns behind success—and the questions that can shape the next cycle.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#dashboard">Explore the analysis <span aria-hidden="true">↓</span></a>
+          <a class="button button-quiet" href="#project-links">View project links <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-meta">
+          <span><span class="meta-icon">◷</span> 1992—2026</span>
+          <span><span class="meta-icon">◉</span> Summer + Winter Games</span>
+          <span><span class="meta-icon">▦</span> Tableau project</span>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Decorative medal and performance chart illustration">
+        <div class="art-orbit orbit-one"></div>
+        <div class="art-orbit orbit-two"></div>
+        <div class="art-sun"></div>
+        <div class="medal">
+          <div class="medal-ribbon"></div>
+          <div class="medal-face"><span>★</span><small>EXCELLENCE</small></div>
+        </div>
+        <div class="floating-card card-top"><span class="mini-dot dot-coral"></span> ATHLETE PERFORMANCE <b>+18.4%</b></div>
+        <div class="floating-card card-bottom"><span class="mini-dot dot-green"></span> MEDAL MOMENTUM <b>↑ Rising</b></div>
+        <div class="art-caption">THE NUMBERS<br>BEHIND THE PODIUM</div>
+      </div>
+    </section>
+
+    <section class="stats-strip" aria-label="Project scope">
+      <div><strong>34<span> yrs</span></strong><small>Olympic history explored</small></div>
+      <div><strong>2</strong><small>Games seasons</small></div>
+      <div><strong>50<span>+</span></strong><small>Sports to investigate</small></div>
+      <div><strong>60<span>+</span></strong><small>Countries represented</small></div>
+      <p class="stats-note">Scope figures reflect the project brief; confirm them against the final datasets.</p>
+    </section>
+
+    <section class="section dashboard-section" id="dashboard">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">THE DASHBOARD</p>
+          <h2>Performance, in perspective.</h2>
+        </div>
+        <p class="section-intro">Switch views to explore the example findings from the project brief. Figures should be validated against the source data before publication.</p>
+      </div>
+      <div class="dashboard-shell">
+        <div class="dashboard-topbar">
+          <div class="dashboard-title"><span class="live-dot"></span><div><b>Olympic performance overview</b><small>Interactive preview · brief figures</small></div></div>
+          <div class="view-tabs" role="tablist" aria-label="Dashboard chart views">
+            <button class="view-tab is-active" id="tab-sports" type="button" role="tab" aria-selected="true" aria-controls="chart-panel" data-view="sports">Sports</button>
+            <button class="view-tab" id="tab-countries" type="button" role="tab" aria-selected="false" aria-controls="chart-panel" data-view="countries">Countries</button>
+            <button class="view-tab" id="tab-trends" type="button" role="tab" aria-selected="false" aria-controls="chart-panel" data-view="trends">Trends</button>
+          </div>
+          <span class="season-chip">1992—2026 <span aria-hidden="true">⌄</span></span>
+        </div>
+        <div class="dashboard-content" id="chart-panel" role="tabpanel" aria-labelledby="tab-sports">
+          <div class="chart-main">
+            <div class="chart-heading">
+              <div><p class="chart-kicker" id="chart-kicker">SPORT CATEGORY</p><h3 id="chart-title">Average medals per athlete</h3></div>
+              <span class="chart-unit" id="chart-unit">AVG. MEDALS</span>
+            </div>
+            <div id="chart-container" class="chart-container"></div>
+            <p class="chart-footnote" id="chart-footnote">Illustrative values supplied in the project brief. Confirm the measure and calculation method.</p>
+          </div>
+          <aside class="chart-aside">
+            <div class="aside-label">KEY TAKEAWAY</div>
+            <div class="takeaway-icon" id="takeaway-icon">↗</div>
+            <h3 id="takeaway-title">Small margins.<br>Big opportunities.</h3>
+            <p id="takeaway-copy">Compare medal outcomes with athlete participation to spot sports worth exploring—not just the biggest medal totals.</p>
+            <div class="aside-rule"></div>
+            <p class="aside-source"><b>DATA NOTE</b><span id="source-note">Sample metrics from the supplied brief; source data was not included.</span></p>
+          </aside>
+        </div>
+      </div>
+      <p class="preview-notice"><span aria-hidden="true">ⓘ</span> Preview uses figures stated in the brief, not independently verified data. Investment visualizations require a separate investment dataset.</p>
+    </section>
+
+    <section class="section scenarios-section" id="scenarios">
+      <div class="section-heading">
+        <div><p class="eyebrow">WHO CAN USE THIS?</p><h2>Three questions. One bigger picture.</h2></div>
+        <p class="section-intro">The same data can help a sports committee plan, a funding agency evaluate, and a journalist tell a richer story.</p>
+      </div>
+      <div class="scenario-grid">
+        <article class="scenario-card">
+          <div class="scenario-top"><span class="scenario-number">01</span><span class="scenario-icon">◎</span></div>
+          <p class="scenario-role">NATIONAL OLYMPIC COMMITTEE</p>
+          <h3>Where should we invest?</h3>
+          <p>Priya compares sport-level results and athlete participation to find disciplines where her nation's performance may have room to grow.</p>
+          <a href="#dashboard" class="text-link" data-switch-view="sports">Explore sport performance <span>→</span></a>
+        </article>
+        <article class="scenario-card">
+          <div class="scenario-top"><span class="scenario-number">02</span><span class="scenario-icon">◈</span></div>
+          <p class="scenario-role">SPORTS DEVELOPMENT FUND</p>
+          <h3>What does funding achieve?</h3>
+          <p>Carlos looks for a relationship between investment and medal outcomes—once comparable, country-level funding data is available.</p>
+          <a href="#methodology" class="text-link">Review data requirements <span>→</span></a>
+        </article>
+        <article class="scenario-card">
+          <div class="scenario-top"><span class="scenario-number">03</span><span class="scenario-icon">▤</span></div>
+          <p class="scenario-role">OLYMPIC DATA JOURNALIST</p>
+          <h3>How has the story changed?</h3>
+          <p>William explores medal trends and host-nation results to build a data-backed narrative across Olympic editions.</p>
+          <a href="#dashboard" class="text-link" data-switch-view="trends">Explore medal trends <span>→</span></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="methodology-section" id="methodology">
+      <div class="methodology-copy">
+        <p class="eyebrow">BEFORE DRAWING CONCLUSIONS</p>
+        <h2>Good insights start<br>with good definitions.</h2>
+        <p>Medal totals don't tell the whole story. Every comparison depends on what is counted, which years are included, and how each metric is defined.</p>
+        <a class="text-link" href="#project-links">See the project links <span>→</span></a>
+      </div>
+      <div class="methodology-list">
+        <div class="method-item"><span>01</span><div><b>Check the time range</b><p>Confirm the covered Olympic editions and whether Summer and Winter Games are combined.</p></div></div>
+        <div class="method-item"><span>02</span><div><b>Define the medal metric</b><p>Clarify whether "medals per athlete" counts all participants or only medal-winning athletes.</p></div></div>
+        <div class="method-item"><span>03</span><div><b>Validate country and host totals</b><p>Account for team events, historical country names, ties, and host-country definitions.</p></div></div>
+        <div class="method-item"><span>04</span><div><b>Bring evidence for investment</b><p>Medal data alone cannot demonstrate funding efficiency; add a comparable investment source.</p></div></div>
+      </div>
+    </section>
+
+    <section class="project-links-section" id="project-links">
+      <div>
+        <p class="eyebrow">TAKE A CLOSER LOOK</p>
+        <h2>Ready to explore the project?</h2>
+        <p>Replace the sample destinations with your published Tableau demo and GitHub repository before sharing this page.</p>
+      </div>
+      <div class="project-link-actions">
+        <a class="button button-light" href="#dashboard">View dashboard preview <span aria-hidden="true">↗</span></a>
+        <a class="button button-outline" href="https://github.com/your-username/olympic-performance-analysis" target="_blank" rel="noopener noreferrer">GitHub repository <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true">O</span><span>SPORTS<span class="brand-divider">/</span>INSIGHT</span></a>
+    <p>Global Olympic Sports Performance Analysis <span>·</span> Tableau project</p>
+    <a href="#top" class="back-to-top">Back to top ↑</a>
+  </footer>
+</body>
+</html>
